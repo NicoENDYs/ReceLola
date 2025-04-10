@@ -146,10 +146,10 @@ function buscar() {
                             <h5 class="card-title">${receta.titulo}</h5>
                             <p class="card-text">${receta.descripcion}</p>
                             <p class="card-text">
-                                <small class="text-muted">Costo de fabricación: ${receta.costo}</small>
+                                <small class="text-muted">Costo de la fabricación: ${receta.costo}</small>
                             </p>
                             <p class="card-text">
-                                <small class="text-muted">Precio de venta: ${receta.precio}</small>
+                                <small class="text-muted">Precio de la venta: ${receta.precio}</small>
                             </p>
                         </div>
                     </div>
