@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recetas</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/rece.css">
+</head>
+<header>
+<body class="fondo1">
+    <div class="row fondo1">
+        <div class="col-1">
+            <img src="./images/logoo.png" alt="">
+        </div> 
+        <div class="col-11">
+            <h1 class="text-center Rece">RECETAS DE LOLA</h1>
+        </div>
+    </div>  
+</header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active letra" href="index.html">Recetas</a>
+                    </li>
+                </ul>
+                <form class="d-flex ms-auto">
+                    <input id="buscarReceta" class="form-control me-2 letra" type="search" placeholder="Buscar receta" aria-label="Buscar" />
+                    <button type="button" class="btn btn-outline-success letra" onclick="buscar()">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container my-5 fondo1">
+        <button type="button" class="btn btn-primary mb-4 letra" data-bs-toggle="modal" data-bs-target="#miModal">
+            Añadir Receta
+        </button>
+
+
+        
+        <div class="modal" tabindex="-1" id="miModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title letra">Añadir Receta</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="titulo" class="form-label letra">Título</label>
+                            <input type="text" id="titulo" class="form-control" placeholder="Nombre de la receta" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="descrip" class="form-label letra">Descripción</label>
+                            <input type="text" id="descrip" class="form-control" placeholder="Breve descripción" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="imagen" class="form-label letra">Subir Imagen</label>
+                            <input type="file" id="imagen" class="form-control" accept="imagen" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="costo" class="form-label letra">Costo de fabricación</label>
+                            <input type="number" id="costo" class="form-control" placeholder="Precio de venta" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="precio" class="form-label letra ">Precio de venta</label>
+                            <input type="number" id="precio" class="form-control" placeholder="Precio de Fabricacion" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary letra" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary letra" onclick="guardar()">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="alert alert-success" id="alerta" style="display: none;">
+            Receta guardada correctamente.
+        <div id="cartas" class="row">
+        </div>
+    </div>
+
+
+    <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+        </ul>
+        <p class="text-center text-muted">©Nicolas Guarin 2024, ENDY's Inc</p>
+    </footer>
+    
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="rece.js"></script>
+</body>
+
+</html>
